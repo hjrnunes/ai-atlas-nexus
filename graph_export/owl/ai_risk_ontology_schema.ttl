@@ -1,0 +1,4 @@
+Usage: gen-owl [OPTIONS] YAMLFILE
+Try 'gen-owl --help' for help.
+
+Error: Invalid value for 'YAMLFILE': File 'src/ai_atlas_nexus/ai_risk_ontology/schema/ai_risk_ontology.yaml' does not exist.
