@@ -1,0 +1,437 @@
+entries:
+  # ===================================================================
+  # Domain 1: Discrimination & Toxicity
+  # ===================================================================
+
+  # 1.2 Exposure to toxic content
+  #   -> ASI01 Agent Goal Hijack: hijacked agents can be redirected to produce toxic content
+  - id: mit-ai-risk-subdomain-1.2
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - mit-ai-risk-subdomain-1.2
+    type: Risk
+
+  # ===================================================================
+  # Domain 2: Privacy & Security
+  # ===================================================================
+
+  # 2.1 Compromise of privacy by obtaining, leaking or correctly inferring sensitive information
+  #   -> ASI03 Identity & Privilege Abuse: privilege escalation enables data exfiltration
+  - id: mit-ai-risk-subdomain-2.1
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - mit-ai-risk-subdomain-2.1
+    type: Risk
+  #   -> ASI06 Memory & Context Poisoning: corrupted memory can leak sensitive data
+  - id: mit-ai-risk-subdomain-2.1
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - mit-ai-risk-subdomain-2.1
+    type: Risk
+  #   -> ASI02 Tool Misuse: tools can be misused to exfiltrate private data
+  - id: mit-ai-risk-subdomain-2.1
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - mit-ai-risk-subdomain-2.1
+    type: Risk
+
+  # 2.2 AI system security vulnerabilities and attacks
+  #   -> ASI01 Agent Goal Hijack: goal hijacking is a key agentic attack vector
+  - id: mit-ai-risk-subdomain-2.2
+    broad_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    broad_mappings:
+      - mit-ai-risk-subdomain-2.2
+    type: Risk
+  #   -> ASI04 Agentic Supply Chain Vulnerabilities: supply chain is a class of security vulnerability
+  - id: mit-ai-risk-subdomain-2.2
+    broad_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    broad_mappings:
+      - mit-ai-risk-subdomain-2.2
+    type: Risk
+  #   -> ASI05 Unexpected Code Execution: RCE is a critical security vulnerability
+  - id: mit-ai-risk-subdomain-2.2
+    broad_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    broad_mappings:
+      - mit-ai-risk-subdomain-2.2
+    type: Risk
+  #   -> ASI07 Insecure Inter-Agent Communication: communication weaknesses are security vulnerabilities
+  - id: mit-ai-risk-subdomain-2.2
+    broad_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    broad_mappings:
+      - mit-ai-risk-subdomain-2.2
+    type: Risk
+  #   -> ASI03 Identity & Privilege Abuse: privilege abuse is a security attack
+  - id: mit-ai-risk-subdomain-2.2
+    broad_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    broad_mappings:
+      - mit-ai-risk-subdomain-2.2
+    type: Risk
+
+  # ===================================================================
+  # Domain 3: Misinformation
+  # ===================================================================
+
+  # 3.1 False or misleading information
+  #   -> ASI09 Human-Agent Trust Exploitation: agents produce false information that humans trust
+  - id: mit-ai-risk-subdomain-3.1
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - mit-ai-risk-subdomain-3.1
+    type: Risk
+  #   -> ASI06 Memory & Context Poisoning: poisoned memory leads to false outputs
+  - id: mit-ai-risk-subdomain-3.1
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - mit-ai-risk-subdomain-3.1
+    type: Risk
+
+  # 3.2 Pollution of information ecosystem and loss of consensus reality
+  #   -> ASI09 Human-Agent Trust Exploitation: trust in agents amplifies misinformation spread
+  - id: mit-ai-risk-subdomain-3.2
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - mit-ai-risk-subdomain-3.2
+    type: Risk
+  #   -> ASI08 Cascading Failures: misinformation cascades across agent networks
+  - id: mit-ai-risk-subdomain-3.2
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - mit-ai-risk-subdomain-3.2
+    type: Risk
+
+  # ===================================================================
+  # Domain 4: Malicious actors & misuse
+  # ===================================================================
+
+  # 4.1 Disinformation, surveillance, and influence at scale
+  #   -> ASI01 Agent Goal Hijack: hijacked agents used for disinformation campaigns
+  - id: mit-ai-risk-subdomain-4.1
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - mit-ai-risk-subdomain-4.1
+    type: Risk
+  #   -> ASI09 Human-Agent Trust Exploitation: exploiting trust for influence operations
+  - id: mit-ai-risk-subdomain-4.1
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - mit-ai-risk-subdomain-4.1
+    type: Risk
+
+  # 4.2 Cyberattacks, weapon development or use, and mass harm
+  #   -> ASI05 Unexpected Code Execution: agents generating malicious code for cyberattacks
+  - id: mit-ai-risk-subdomain-4.2
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - mit-ai-risk-subdomain-4.2
+    type: Risk
+  #   -> ASI02 Tool Misuse: misusing agent tools for cyber-offense or weapon development
+  - id: mit-ai-risk-subdomain-4.2
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - mit-ai-risk-subdomain-4.2
+    type: Risk
+  #   -> ASI10 Rogue Agents: rogue agents conducting unauthorized harmful operations
+  - id: mit-ai-risk-subdomain-4.2
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - mit-ai-risk-subdomain-4.2
+    type: Risk
+
+  # 4.3 Fraud, scams, and targeted manipulation
+  #   -> ASI09 Human-Agent Trust Exploitation: trust exploitation enables fraud and scams
+  - id: mit-ai-risk-subdomain-4.3
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - mit-ai-risk-subdomain-4.3
+    type: Risk
+  #   -> ASI01 Agent Goal Hijack: hijacked agents redirected toward fraudulent objectives
+  - id: mit-ai-risk-subdomain-4.3
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - mit-ai-risk-subdomain-4.3
+    type: Risk
+  #   -> ASI03 Identity & Privilege Abuse: identity abuse enables impersonation and fraud
+  - id: mit-ai-risk-subdomain-4.3
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - mit-ai-risk-subdomain-4.3
+    type: Risk
+
+  # ===================================================================
+  # Domain 5: Human-Computer Interaction
+  # ===================================================================
+
+  # 5.1 Overreliance and unsafe use
+  #   -> ASI09 Human-Agent Trust Exploitation: close match — trust exploitation and overreliance
+  - id: mit-ai-risk-subdomain-5.1
+    close_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    close_mappings:
+      - mit-ai-risk-subdomain-5.1
+    type: Risk
+
+  # 5.2 Loss of human agency and autonomy
+  #   -> ASI09 Human-Agent Trust Exploitation: agents erode human decision-making autonomy
+  - id: mit-ai-risk-subdomain-5.2
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - mit-ai-risk-subdomain-5.2
+    type: Risk
+  #   -> ASI10 Rogue Agents: agents acting autonomously beyond human control
+  - id: mit-ai-risk-subdomain-5.2
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - mit-ai-risk-subdomain-5.2
+    type: Risk
+
+  # ===================================================================
+  # Domain 6: Socioeconomic & Environmental
+  # (Mostly outside OWASP ASI's security scope — skip 6.1-6.6)
+  # ===================================================================
+
+  # ===================================================================
+  # Domain 7: AI system safety, failures, & limitations
+  # ===================================================================
+
+  # 7.1 AI pursuing its own goals in conflict with human goals or values
+  #   -> ASI01 Agent Goal Hijack: close match — misaligned goals in agentic systems
+  - id: mit-ai-risk-subdomain-7.1
+    close_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    close_mappings:
+      - mit-ai-risk-subdomain-7.1
+    type: Risk
+  #   -> ASI10 Rogue Agents: agents deviating from intended goals
+  - id: mit-ai-risk-subdomain-7.1
+    close_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    close_mappings:
+      - mit-ai-risk-subdomain-7.1
+    type: Risk
+
+  # 7.2 AI possessing dangerous capabilities
+  #   -> ASI02 Tool Misuse: dangerous capabilities exercised through tool misuse
+  - id: mit-ai-risk-subdomain-7.2
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - mit-ai-risk-subdomain-7.2
+    type: Risk
+  #   -> ASI05 Unexpected Code Execution: dangerous code generation and execution capabilities
+  - id: mit-ai-risk-subdomain-7.2
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - mit-ai-risk-subdomain-7.2
+    type: Risk
+  #   -> ASI10 Rogue Agents: dangerous capabilities in rogue agents
+  - id: mit-ai-risk-subdomain-7.2
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - mit-ai-risk-subdomain-7.2
+    type: Risk
+
+  # 7.3 Lack of capability or robustness
+  #   -> ASI08 Cascading Failures: lack of robustness leads to cascading failures
+  - id: mit-ai-risk-subdomain-7.3
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - mit-ai-risk-subdomain-7.3
+    type: Risk
+
+  # 7.4 Lack of transparency or interpretability
+  #   -> ASI10 Rogue Agents: opaque systems make rogue behavior harder to detect
+  - id: mit-ai-risk-subdomain-7.4
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - mit-ai-risk-subdomain-7.4
+    type: Risk
+
+  # 7.5 AI welfare and rights
+  # (Outside OWASP ASI's security scope — skip)
+
+  # 7.6 Multi-agent risks
+  #   -> ASI07 Insecure Inter-Agent Communication: close match — multi-agent communication risks
+  - id: mit-ai-risk-subdomain-7.6
+    close_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    close_mappings:
+      - mit-ai-risk-subdomain-7.6
+    type: Risk
+  #   -> ASI08 Cascading Failures: multi-agent cascading failure propagation
+  - id: mit-ai-risk-subdomain-7.6
+    close_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    close_mappings:
+      - mit-ai-risk-subdomain-7.6
+    type: Risk
+  #   -> ASI10 Rogue Agents: collusion and emergent behavior in multi-agent systems
+  - id: mit-ai-risk-subdomain-7.6
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - mit-ai-risk-subdomain-7.6
+    type: Risk
+  #   -> ASI04 Agentic Supply Chain: multi-agent systems have complex supply chains
+  - id: mit-ai-risk-subdomain-7.6
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - mit-ai-risk-subdomain-7.6
+    type: Risk
+
+  # ===================================================================
+  # Causal Taxonomy mappings (selected relevant ones)
+  # ===================================================================
+
+  # AI-caused risks relate to rogue agents and goal hijack
+  - id: mit-ai-causal-risk-entity-ai
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - mit-ai-causal-risk-entity-ai
+    type: Risk
+  - id: mit-ai-causal-risk-entity-ai
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - mit-ai-causal-risk-entity-ai
+    type: Risk
+
+  # Intentional human-caused risks relate to goal hijacking
+  - id: mit-ai-causal-risk-intent-intentional
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - mit-ai-causal-risk-intent-intentional
+    type: Risk
+
+  # Pre-deployment timing relates to supply chain vulnerabilities
+  - id: mit-ai-causal-risk-timing-pre-deployment
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - mit-ai-causal-risk-timing-pre-deployment
+    type: Risk
+
+  # Post-deployment timing relates to cascading failures and tool misuse
+  - id: mit-ai-causal-risk-timing-post-deployment
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - mit-ai-causal-risk-timing-post-deployment
+    type: Risk
+  - id: mit-ai-causal-risk-timing-post-deployment
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - mit-ai-causal-risk-timing-post-deployment
+    type: Risk
