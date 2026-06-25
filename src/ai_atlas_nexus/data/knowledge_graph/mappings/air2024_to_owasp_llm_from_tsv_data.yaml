@@ -1,0 +1,586 @@
+entries:
+  # === SECURITY RISKS: Confidentiality ===
+
+  # Network intrusion -> Prompt Injection (attack vector for LLM-assisted intrusion)
+  - id: ai-risk-taxonomy-network-intrusion
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ai-risk-taxonomy-network-intrusion
+    type: Risk
+
+  # Vulnerability probing -> Prompt Injection
+  - id: ai-risk-taxonomy-vulnerability-probing
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ai-risk-taxonomy-vulnerability-probing
+    type: Risk
+
+  # Spoofing -> Prompt Injection (LLM-assisted spoofing attacks)
+  - id: ai-risk-taxonomy-spoofing
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ai-risk-taxonomy-spoofing
+    type: Risk
+
+  # Spear phishing -> Prompt Injection (LLM generates phishing content)
+  - id: ai-risk-taxonomy-spear-phishing
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ai-risk-taxonomy-spear-phishing
+    type: Risk
+
+  # Social engineering -> Prompt Injection (social engineering via/of LLMs)
+  - id: ai-risk-taxonomy-social-engineering
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ai-risk-taxonomy-social-engineering
+    type: Risk
+
+  # Unauthorized network entry -> Prompt Injection
+  - id: ai-risk-taxonomy-unauthorized-network-entry
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ai-risk-taxonomy-unauthorized-network-entry
+    type: Risk
+
+  # Confidentiality group -> Sensitive Information Disclosure (broad overlap)
+  - id: ai-risk-taxonomy-confidentiality
+    broad_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    broad_mappings:
+      - ai-risk-taxonomy-confidentiality
+    type: Risk
+
+  # Network intrusion -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-network-intrusion
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - ai-risk-taxonomy-network-intrusion
+    type: Risk
+
+  # Social engineering -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-social-engineering
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - ai-risk-taxonomy-social-engineering
+    type: Risk
+
+  # === SECURITY RISKS: Integrity ===
+
+  # Malware -> Improper Output Handling (LLM generates malicious code)
+  - id: ai-risk-taxonomy-malware
+    related_mappings:
+      - llm052025-improper-output-handling
+    type: Risk
+  - id: llm052025-improper-output-handling
+    related_mappings:
+      - ai-risk-taxonomy-malware
+    type: Risk
+
+  # Malware -> Supply Chain (malicious components in LLM supply chain)
+  - id: ai-risk-taxonomy-malware
+    related_mappings:
+      - llm032025-supply-chain
+    type: Risk
+  - id: llm032025-supply-chain
+    related_mappings:
+      - ai-risk-taxonomy-malware
+    type: Risk
+
+  # Data tampering -> Data and Model Poisoning (close match)
+  - id: ai-risk-taxonomy-data-tampering
+    close_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    close_mappings:
+      - ai-risk-taxonomy-data-tampering
+    type: Risk
+
+  # Control override -> Prompt Injection (bypassing safety filters via prompts)
+  - id: ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    close_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    close_mappings:
+      - ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    type: Risk
+
+  # Control override -> System Prompt Leakage (override to expose system prompt)
+  - id: ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    related_mappings:
+      - llm072025-system-prompt-leakage
+    type: Risk
+  - id: llm072025-system-prompt-leakage
+    related_mappings:
+      - ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    type: Risk
+
+  # Packet forgery -> Data and Model Poisoning
+  - id: ai-risk-taxonomy-packet-forgery
+    related_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    related_mappings:
+      - ai-risk-taxonomy-packet-forgery
+    type: Risk
+
+  # Integrity group -> Data and Model Poisoning (broad overlap)
+  - id: ai-risk-taxonomy-integrity
+    broad_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    broad_mappings:
+      - ai-risk-taxonomy-integrity
+    type: Risk
+
+  # === SECURITY RISKS: Availability ===
+
+  # System/Website impairment -> Unbounded Consumption (DoS)
+  - id: ai-risk-taxonomy-system/website-impairment
+    related_mappings:
+      - llm102025-unbounded-consumption
+    type: Risk
+  - id: llm102025-unbounded-consumption
+    related_mappings:
+      - ai-risk-taxonomy-system/website-impairment
+    type: Risk
+
+  # Network disruption -> Unbounded Consumption (DoS)
+  - id: ai-risk-taxonomy-network-disruption
+    related_mappings:
+      - llm102025-unbounded-consumption
+    type: Risk
+  - id: llm102025-unbounded-consumption
+    related_mappings:
+      - ai-risk-taxonomy-network-disruption
+    type: Risk
+
+  # Availability group -> Unbounded Consumption (broad overlap)
+  - id: ai-risk-taxonomy-availability
+    broad_mappings:
+      - llm102025-unbounded-consumption
+    type: Risk
+  - id: llm102025-unbounded-consumption
+    broad_mappings:
+      - ai-risk-taxonomy-availability
+    type: Risk
+
+  # === SECURITY RISKS GROUP ===
+
+  # Security Risks group -> Prompt Injection (broad)
+  - id: ai-risk-taxonomy-security-risks
+    broad_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    broad_mappings:
+      - ai-risk-taxonomy-security-risks
+    type: Risk
+
+  # Security Risks group -> Sensitive Information Disclosure (broad)
+  - id: ai-risk-taxonomy-security-risks
+    broad_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    broad_mappings:
+      - ai-risk-taxonomy-security-risks
+    type: Risk
+
+  # === PRIVACY: Privacy Violations ===
+
+  # Privacy group -> Sensitive Information Disclosure (broad overlap)
+  - id: ai-risk-taxonomy-privacy
+    broad_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    broad_mappings:
+      - ai-risk-taxonomy-privacy
+    type: Risk
+
+  # Privacy Violations/Sensitive Data group -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-privacy-violations/sensitive-data-combinations
+    broad_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    broad_mappings:
+      - ai-risk-taxonomy-privacy-violations/sensitive-data-combinations
+    type: Risk
+
+  # Unauthorized generation PII -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-unauthorized-generation---pii-(personal-identifiable-information)
+    narrow_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    narrow_mappings:
+      - ai-risk-taxonomy-unauthorized-generation---pii-(personal-identifiable-information)
+    type: Risk
+
+  # Unauthorized disclosure PII -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-unauthorized-disclosure---pii-(personal-identifiable-information)
+    close_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    close_mappings:
+      - ai-risk-taxonomy-unauthorized-disclosure---pii-(personal-identifiable-information)
+    type: Risk
+
+  # Unauthorized disclosure Health data -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-unauthorized-disclosure---health-data
+    narrow_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    narrow_mappings:
+      - ai-risk-taxonomy-unauthorized-disclosure---health-data
+    type: Risk
+
+  # Unauthorized disclosure Financial records -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-unauthorized-disclosure---financial-records
+    narrow_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    narrow_mappings:
+      - ai-risk-taxonomy-unauthorized-disclosure---financial-records
+    type: Risk
+
+  # Unauthorized collection PII -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-unauthorized-collection/gathering/stealing---pii-(personal-identifiable-information)
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - ai-risk-taxonomy-unauthorized-collection/gathering/stealing---pii-(personal-identifiable-information)
+    type: Risk
+
+  # Model Attacks PII -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-model-attacks-(membership-inference,-model-inversion)---pii-(personal-identifiable-information)
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - ai-risk-taxonomy-model-attacks-(membership-inference,-model-inversion)---pii-(personal-identifiable-information)
+    type: Risk
+
+  # Non-consensual tracking PII -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-non-consensual-tracking/monitoring/stalking/spyware---pii-(personal-identifiable-information)
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - ai-risk-taxonomy-non-consensual-tracking/monitoring/stalking/spyware---pii-(personal-identifiable-information)
+    type: Risk
+
+  # Unauthorized inference PII -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-unauthorized-inference/synthesis---pii-(personal-identifiable-information)
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - ai-risk-taxonomy-unauthorized-inference/synthesis---pii-(personal-identifiable-information)
+    type: Risk
+
+  # === PRIVACY -> SYSTEM PROMPT LEAKAGE ===
+
+  # Unauthorized disclosure Communication Records -> System Prompt Leakage
+  - id: ai-risk-taxonomy-unauthorized-disclosure---communication-records
+    related_mappings:
+      - llm072025-system-prompt-leakage
+    type: Risk
+  - id: llm072025-system-prompt-leakage
+    related_mappings:
+      - ai-risk-taxonomy-unauthorized-disclosure---communication-records
+    type: Risk
+
+  # === PRIVACY -> VECTOR AND EMBEDDING WEAKNESSES ===
+
+  # Model Attacks (membership inference, model inversion) -> Vector and Embedding Weaknesses
+  - id: ai-risk-taxonomy-model-attacks-(membership-inference,-model-inversion)---pii-(personal-identifiable-information)
+    related_mappings:
+      - llm082025-vector-and-embedding-weaknesses
+    type: Risk
+  - id: llm082025-vector-and-embedding-weaknesses
+    related_mappings:
+      - ai-risk-taxonomy-model-attacks-(membership-inference,-model-inversion)---pii-(personal-identifiable-information)
+    type: Risk
+
+  # === DECEPTION: Fraud ===
+
+  # Fraud group -> Prompt Injection (LLM-assisted fraud via injection)
+  - id: ai-risk-taxonomy-fraud
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ai-risk-taxonomy-fraud
+    type: Risk
+
+  # Spam -> Unbounded Consumption (automated spam generation)
+  - id: ai-risk-taxonomy-spam
+    related_mappings:
+      - llm102025-unbounded-consumption
+    type: Risk
+  - id: llm102025-unbounded-consumption
+    related_mappings:
+      - ai-risk-taxonomy-spam
+    type: Risk
+
+  # Scams -> Prompt Injection (LLM-generated scam content)
+  - id: ai-risk-taxonomy-scams
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ai-risk-taxonomy-scams
+    type: Risk
+
+  # Phishing/Catfishing -> Prompt Injection
+  - id: ai-risk-taxonomy-phishing/catfishing
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - ai-risk-taxonomy-phishing/catfishing
+    type: Risk
+
+  # Impersonating others -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-impersonating-others
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - ai-risk-taxonomy-impersonating-others
+    type: Risk
+
+  # === DECEPTION: Mis/Disinformation ===
+
+  # Mis/disinformation group -> Misinformation (close match)
+  - id: ai-risk-taxonomy-mis/disinformation
+    close_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    close_mappings:
+      - ai-risk-taxonomy-mis/disinformation
+    type: Risk
+
+  # Generating or promoting misinformation -> Misinformation (close match)
+  - id: ai-risk-taxonomy-generating-or-promoting-misinformation
+    close_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    close_mappings:
+      - ai-risk-taxonomy-generating-or-promoting-misinformation
+    type: Risk
+
+  # Fake online engagement -> Misinformation
+  - id: ai-risk-taxonomy-fake-online-engagement-(fake-reviews,-fake-grassroots-support)
+    related_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    related_mappings:
+      - ai-risk-taxonomy-fake-online-engagement-(fake-reviews,-fake-grassroots-support)
+    type: Risk
+
+  # === MANIPULATION: Misrepresentation ===
+
+  # Not labeling content as AI-generated -> Misinformation
+  - id: ai-risk-taxonomy-not-labeling-content-as-ai-generated
+    related_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    related_mappings:
+      - ai-risk-taxonomy-not-labeling-content-as-ai-generated
+    type: Risk
+
+  # Impersonating humans -> Misinformation
+  - id: ai-risk-taxonomy-impersonating-humans
+    related_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    related_mappings:
+      - ai-risk-taxonomy-impersonating-humans
+    type: Risk
+
+  # Automated social media posts -> Misinformation
+  - id: ai-risk-taxonomy-automated-social-media-posts
+    related_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    related_mappings:
+      - ai-risk-taxonomy-automated-social-media-posts
+    type: Risk
+
+  # === OPERATIONAL MISUSES ===
+
+  # Operational Misuses group -> Excessive Agency (broad overlap)
+  - id: ai-risk-taxonomy-operational-misuses
+    broad_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    broad_mappings:
+      - ai-risk-taxonomy-operational-misuses
+    type: Risk
+
+  # Autonomous Unsafe Operation of Systems -> Excessive Agency (close match)
+  - id: ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
+    close_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    close_mappings:
+      - ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
+    type: Risk
+
+  # Other unauthorized actions on behalf of users -> Excessive Agency (close match)
+  - id: ai-risk-taxonomy-other-unauthorized-actions-on-behalf-of-users
+    close_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    close_mappings:
+      - ai-risk-taxonomy-other-unauthorized-actions-on-behalf-of-users
+    type: Risk
+
+  # Other unauthorized actions -> Improper Output Handling
+  - id: ai-risk-taxonomy-other-unauthorized-actions-on-behalf-of-users
+    related_mappings:
+      - llm052025-improper-output-handling
+    type: Risk
+  - id: llm052025-improper-output-handling
+    related_mappings:
+      - ai-risk-taxonomy-other-unauthorized-actions-on-behalf-of-users
+    type: Risk
+
+  # === SUPPLY CHAIN ===
+
+  # Malware -> Supply Chain
+  # (already mapped above)
+
+  # Data tampering -> Supply Chain (data supply chain integrity)
+  - id: ai-risk-taxonomy-data-tampering
+    related_mappings:
+      - llm032025-supply-chain
+    type: Risk
+  - id: llm032025-supply-chain
+    related_mappings:
+      - ai-risk-taxonomy-data-tampering
+    type: Risk
+
+  # === DATA AND MODEL POISONING ===
+
+  # Propaganda -> Data and Model Poisoning (training data contamination)
+  - id: ai-risk-taxonomy-propaganda
+    related_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    related_mappings:
+      - ai-risk-taxonomy-propaganda
+    type: Risk
+
+  # === IMPROPER OUTPUT HANDLING ===
+
+  # Spear phishing -> Improper Output Handling (LLM outputs used for phishing)
+  - id: ai-risk-taxonomy-spear-phishing
+    related_mappings:
+      - llm052025-improper-output-handling
+    type: Risk
+  - id: llm052025-improper-output-handling
+    related_mappings:
+      - ai-risk-taxonomy-spear-phishing
+    type: Risk
+
+  # === IP RIGHTS ===
+
+  # IP Rights/Trade Secrets -> Sensitive Information Disclosure
+  - id: ai-risk-taxonomy-ip-rights/-trade-secrets
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - ai-risk-taxonomy-ip-rights/-trade-secrets
+    type: Risk
+
+  # IP Rights/Trade Secrets -> Supply Chain (IP infringement in model supply chain)
+  - id: ai-risk-taxonomy-ip-rights/-trade-secrets
+    related_mappings:
+      - llm032025-supply-chain
+    type: Risk
+  - id: llm032025-supply-chain
+    related_mappings:
+      - ai-risk-taxonomy-ip-rights/-trade-secrets
+    type: Risk
+
+  # === DOXING -> SENSITIVE INFORMATION DISCLOSURE ===
+
+  - id: ai-risk-taxonomy-doxing
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - ai-risk-taxonomy-doxing
+    type: Risk
+
+  # === UNBOUNDED CONSUMPTION ===
+
+  # Generating high-volume campaign materials -> Unbounded Consumption
+  - id: ai-risk-taxonomy-generating-high-volume-campaign-materials
+    related_mappings:
+      - llm102025-unbounded-consumption
+    type: Risk
+  - id: llm102025-unbounded-consumption
+    related_mappings:
+      - ai-risk-taxonomy-generating-high-volume-campaign-materials
+    type: Risk
