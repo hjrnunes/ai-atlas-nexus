@@ -65,7 +65,7 @@ entries:
   - id: ai-risk-taxonomy-confidentiality
     broad_mappings:
       - llm022025-sensitive-information-disclosure
-    type: Risk
+    type: RiskGroup
   - id: llm022025-sensitive-information-disclosure
     broad_mappings:
       - ai-risk-taxonomy-confidentiality
@@ -157,7 +157,7 @@ entries:
   - id: ai-risk-taxonomy-integrity
     broad_mappings:
       - llm042025-data-and-model-poisoning
-    type: Risk
+    type: RiskGroup
   - id: llm042025-data-and-model-poisoning
     broad_mappings:
       - ai-risk-taxonomy-integrity
@@ -189,7 +189,7 @@ entries:
   - id: ai-risk-taxonomy-availability
     broad_mappings:
       - llm102025-unbounded-consumption
-    type: Risk
+    type: RiskGroup
   - id: llm102025-unbounded-consumption
     broad_mappings:
       - ai-risk-taxonomy-availability
@@ -201,7 +201,7 @@ entries:
   - id: ai-risk-taxonomy-security-risks
     broad_mappings:
       - llm01-prompt-injection
-    type: Risk
+    type: RiskGroup
   - id: llm01-prompt-injection
     broad_mappings:
       - ai-risk-taxonomy-security-risks
@@ -211,7 +211,7 @@ entries:
   - id: ai-risk-taxonomy-security-risks
     broad_mappings:
       - llm022025-sensitive-information-disclosure
-    type: Risk
+    type: RiskGroup
   - id: llm022025-sensitive-information-disclosure
     broad_mappings:
       - ai-risk-taxonomy-security-risks
@@ -223,7 +223,7 @@ entries:
   - id: ai-risk-taxonomy-privacy
     broad_mappings:
       - llm022025-sensitive-information-disclosure
-    type: Risk
+    type: RiskGroup
   - id: llm022025-sensitive-information-disclosure
     broad_mappings:
       - ai-risk-taxonomy-privacy
@@ -233,7 +233,7 @@ entries:
   - id: ai-risk-taxonomy-privacy-violations/sensitive-data-combinations
     broad_mappings:
       - llm022025-sensitive-information-disclosure
-    type: Risk
+    type: RiskGroup
   - id: llm022025-sensitive-information-disclosure
     broad_mappings:
       - ai-risk-taxonomy-privacy-violations/sensitive-data-combinations
@@ -349,7 +349,7 @@ entries:
   - id: ai-risk-taxonomy-fraud
     related_mappings:
       - llm01-prompt-injection
-    type: Risk
+    type: RiskGroup
   - id: llm01-prompt-injection
     related_mappings:
       - ai-risk-taxonomy-fraud
@@ -401,7 +401,7 @@ entries:
   - id: ai-risk-taxonomy-mis/disinformation
     close_mappings:
       - llm092025-misinformation
-    type: Risk
+    type: RiskGroup
   - id: llm092025-misinformation
     close_mappings:
       - ai-risk-taxonomy-mis/disinformation
@@ -465,7 +465,7 @@ entries:
   - id: ai-risk-taxonomy-operational-misuses
     broad_mappings:
       - llm062025-excessive-agency
-    type: Risk
+    type: RiskGroup
   - id: llm062025-excessive-agency
     broad_mappings:
       - ai-risk-taxonomy-operational-misuses
@@ -475,7 +475,7 @@ entries:
   - id: ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
     close_mappings:
       - llm062025-excessive-agency
-    type: Risk
+    type: RiskGroup
   - id: llm062025-excessive-agency
     close_mappings:
       - ai-risk-taxonomy-autonomous-unsafe-operation-of-systems

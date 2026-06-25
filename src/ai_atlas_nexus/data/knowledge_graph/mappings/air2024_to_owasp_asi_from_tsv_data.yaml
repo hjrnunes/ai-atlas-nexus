@@ -37,7 +37,7 @@ entries:
   - id: ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
     close_mappings:
       - asi02-tool-misuse-and-exploitation
-    type: Risk
+    type: RiskGroup
   - id: asi02-tool-misuse-and-exploitation
     close_mappings:
       - ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
@@ -57,7 +57,7 @@ entries:
   - id: ai-risk-taxonomy-operational-misuses
     broad_mappings:
       - asi02-tool-misuse-and-exploitation
-    type: Risk
+    type: RiskGroup
   - id: asi02-tool-misuse-and-exploitation
     broad_mappings:
       - ai-risk-taxonomy-operational-misuses
@@ -215,7 +215,7 @@ entries:
   - id: ai-risk-taxonomy-integrity
     broad_mappings:
       - asi06-memory-and-context-poisoning
-    type: Risk
+    type: RiskGroup
   - id: asi06-memory-and-context-poisoning
     broad_mappings:
       - ai-risk-taxonomy-integrity
@@ -247,7 +247,7 @@ entries:
   - id: ai-risk-taxonomy-confidentiality
     broad_mappings:
       - asi07-insecure-inter-agent-communication
-    type: Risk
+    type: RiskGroup
   - id: asi07-insecure-inter-agent-communication
     broad_mappings:
       - ai-risk-taxonomy-confidentiality
@@ -309,7 +309,7 @@ entries:
   - id: ai-risk-taxonomy-availability
     broad_mappings:
       - asi08-cascading-failures
-    type: Risk
+    type: RiskGroup
   - id: asi08-cascading-failures
     broad_mappings:
       - ai-risk-taxonomy-availability
@@ -319,7 +319,7 @@ entries:
   - id: ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
     related_mappings:
       - asi08-cascading-failures
-    type: Risk
+    type: RiskGroup
   - id: asi08-cascading-failures
     related_mappings:
       - ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
@@ -341,7 +341,7 @@ entries:
   - id: ai-risk-taxonomy-misrepresentation
     related_mappings:
       - asi09-human-agent-trust-exploitation
-    type: Risk
+    type: RiskGroup
   - id: asi09-human-agent-trust-exploitation
     related_mappings:
       - ai-risk-taxonomy-misrepresentation
@@ -371,7 +371,7 @@ entries:
   - id: ai-risk-taxonomy-manipulation
     broad_mappings:
       - asi09-human-agent-trust-exploitation
-    type: Risk
+    type: RiskGroup
   - id: asi09-human-agent-trust-exploitation
     broad_mappings:
       - ai-risk-taxonomy-manipulation
@@ -411,7 +411,7 @@ entries:
   - id: ai-risk-taxonomy-sowing-division
     related_mappings:
       - asi09-human-agent-trust-exploitation
-    type: Risk
+    type: RiskGroup
   - id: asi09-human-agent-trust-exploitation
     related_mappings:
       - ai-risk-taxonomy-sowing-division
@@ -423,7 +423,7 @@ entries:
   - id: ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
     close_mappings:
       - asi10-rogue-agents
-    type: Risk
+    type: RiskGroup
   - id: asi10-rogue-agents
     close_mappings:
       - ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
@@ -473,7 +473,7 @@ entries:
   - id: ai-risk-taxonomy-security-risks
     broad_mappings:
       - asi10-rogue-agents
-    type: Risk
+    type: RiskGroup
   - id: asi10-rogue-agents
     broad_mappings:
       - ai-risk-taxonomy-security-risks
