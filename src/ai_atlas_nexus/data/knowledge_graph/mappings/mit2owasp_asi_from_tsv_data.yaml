@@ -54,7 +54,7 @@ entries:
       - asi01-agent-goal-hijack
     type: Risk
   - id: asi01-agent-goal-hijack
-    narrow_mappings:
+    broad_mappings:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   #   -> ASI04 Agentic Supply Chain Vulnerabilities: supply chain is a class of security vulnerability
@@ -63,7 +63,7 @@ entries:
       - asi04-agentic-supply-chain-vulnerabilities
     type: Risk
   - id: asi04-agentic-supply-chain-vulnerabilities
-    narrow_mappings:
+    broad_mappings:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   #   -> ASI05 Unexpected Code Execution: RCE is a critical security vulnerability
@@ -72,7 +72,7 @@ entries:
       - asi05-unexpected-code-execution
     type: Risk
   - id: asi05-unexpected-code-execution
-    narrow_mappings:
+    broad_mappings:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   #   -> ASI07 Insecure Inter-Agent Communication: communication weaknesses are security vulnerabilities
@@ -81,7 +81,7 @@ entries:
       - asi07-insecure-inter-agent-communication
     type: Risk
   - id: asi07-insecure-inter-agent-communication
-    narrow_mappings:
+    broad_mappings:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   #   -> ASI03 Identity & Privilege Abuse: privilege abuse is a security attack
@@ -90,7 +90,7 @@ entries:
       - asi03-identity-and-privilege-abuse
     type: Risk
   - id: asi03-identity-and-privilege-abuse
-    narrow_mappings:
+    broad_mappings:
       - mit-ai-risk-subdomain-2.2
     type: Risk
 

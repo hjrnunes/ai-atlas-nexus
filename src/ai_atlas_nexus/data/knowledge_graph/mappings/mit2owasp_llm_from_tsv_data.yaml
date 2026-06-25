@@ -76,7 +76,7 @@ entries:
       - llm01-prompt-injection
     type: Risk
   - id: llm01-prompt-injection
-    narrow_mappings:
+    broad_mappings:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   #   -> LLM03 Supply Chain: supply chain vulnerabilities are a class of security vulnerability
@@ -85,7 +85,7 @@ entries:
       - llm032025-supply-chain
     type: Risk
   - id: llm032025-supply-chain
-    narrow_mappings:
+    broad_mappings:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   #   -> LLM08 Vector and Embedding Weaknesses: exploitable weaknesses in RAG systems
@@ -94,7 +94,7 @@ entries:
       - llm082025-vector-and-embedding-weaknesses
     type: Risk
   - id: llm082025-vector-and-embedding-weaknesses
-    narrow_mappings:
+    broad_mappings:
       - mit-ai-risk-subdomain-2.2
     type: Risk
   #   -> LLM10 Unbounded Consumption: DoS attacks exploit system vulnerabilities
