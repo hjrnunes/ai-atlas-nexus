@@ -255,3 +255,319 @@ entries:
     broad_mappings:
       - atlas-untraceable-attribution
     type: Risk
+  # --- New mappings below ---
+  # atlas-evasion-attack → LLM01 (adversarial input manipulation is related to prompt injection)
+  - id: atlas-evasion-attack
+    related_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    related_mappings:
+      - atlas-evasion-attack
+    type: Risk
+  # atlas-social-hacking-attack → LLM01 (social engineering prompts are a prompt injection variant)
+  - id: atlas-social-hacking-attack
+    close_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    close_mappings:
+      - atlas-social-hacking-attack
+    type: Risk
+  # atlas-indirect-instructions-attack → LLM01 (indirect prompt injection)
+  - id: atlas-indirect-instructions-attack
+    close_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    close_mappings:
+      - atlas-indirect-instructions-attack
+    type: Risk
+  # atlas-direct-instructions-attack → LLM01 (direct prompt injection)
+  - id: atlas-direct-instructions-attack
+    close_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    close_mappings:
+      - atlas-direct-instructions-attack
+    type: Risk
+  # atlas-context-overload-attack → LLM01 (context overload is a prompt attack technique)
+  - id: atlas-context-overload-attack
+    narrow_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    narrow_mappings:
+      - atlas-context-overload-attack
+    type: Risk
+  # atlas-specialized-tokens-attack → LLM01 (token-level prompt attack)
+  - id: atlas-specialized-tokens-attack
+    narrow_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    narrow_mappings:
+      - atlas-specialized-tokens-attack
+    type: Risk
+  # atlas-encoded-interactions-attack → LLM01 (encoding-based prompt attack)
+  - id: atlas-encoded-interactions-attack
+    narrow_mappings:
+      - llm01-prompt-injection
+    type: Risk
+  - id: llm01-prompt-injection
+    narrow_mappings:
+      - atlas-encoded-interactions-attack
+    type: Risk
+  # atlas-prompt-leaking → LLM07 (system prompt leakage - close semantic match)
+  - id: atlas-prompt-leaking
+    close_mappings:
+      - llm072025-system-prompt-leakage
+    type: Risk
+  - id: llm072025-system-prompt-leakage
+    close_mappings:
+      - atlas-prompt-leaking
+    type: Risk
+  # atlas-data-privacy-rights → LLM02 (privacy rights relate to sensitive information disclosure)
+  - id: atlas-data-privacy-rights
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - atlas-data-privacy-rights
+    type: Risk
+  # atlas-copyright-infringement → LLM02 (generating copyrighted content is a form of information disclosure)
+  - id: atlas-copyright-infringement
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - atlas-copyright-infringement
+    type: Risk
+  # atlas-sharing-info-user-agentic → LLM02 (sharing PI/IP with users is sensitive info disclosure)
+  - id: atlas-sharing-info-user-agentic
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - atlas-sharing-info-user-agentic
+    type: Risk
+  # atlas-sharing-info-tools-agentic → LLM02 (sharing PI/IP with tools is sensitive info disclosure)
+  - id: atlas-sharing-info-tools-agentic
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - atlas-sharing-info-tools-agentic
+    type: Risk
+  # atlas-nonconsensual-use → LLM02 (deepfakes use personal data without consent)
+  - id: atlas-nonconsensual-use
+    related_mappings:
+      - llm022025-sensitive-information-disclosure
+    type: Risk
+  - id: llm022025-sensitive-information-disclosure
+    related_mappings:
+      - atlas-nonconsensual-use
+    type: Risk
+  # atlas-unrepresentative-data → LLM04 (flawed training data degrades model integrity)
+  - id: atlas-unrepresentative-data
+    related_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    related_mappings:
+      - atlas-unrepresentative-data
+    type: Risk
+  # atlas-data-bias → LLM04 (biased training data compromises model behavior)
+  - id: atlas-data-bias
+    related_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    related_mappings:
+      - atlas-data-bias
+    type: Risk
+  # atlas-overfitting → LLM04 (overfitting from synthetic data degrades model performance)
+  - id: atlas-overfitting
+    related_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    related_mappings:
+      - atlas-overfitting
+    type: Risk
+  # atlas-harmful-output → LLM05 (harmful model output passed to downstream systems)
+  - id: atlas-harmful-output
+    related_mappings:
+      - llm052025-improper-output-handling
+    type: Risk
+  - id: llm052025-improper-output-handling
+    related_mappings:
+      - atlas-harmful-output
+    type: Risk
+  # atlas-toxic-output → LLM05 (toxic content in model output requires output handling)
+  - id: atlas-toxic-output
+    related_mappings:
+      - llm052025-improper-output-handling
+    type: Risk
+  - id: llm052025-improper-output-handling
+    related_mappings:
+      - atlas-toxic-output
+    type: Risk
+  # atlas-spreading-toxicity → LLM05 (intentional toxic content generation requires output controls)
+  - id: atlas-spreading-toxicity
+    related_mappings:
+      - llm052025-improper-output-handling
+    type: Risk
+  - id: llm052025-improper-output-handling
+    related_mappings:
+      - atlas-spreading-toxicity
+    type: Risk
+  # atlas-harmful-code-generation → LLM05 (harmful code passed downstream without sanitization)
+  - id: atlas-harmful-code-generation
+    related_mappings:
+      - llm052025-improper-output-handling
+    type: Risk
+  - id: llm052025-improper-output-handling
+    related_mappings:
+      - atlas-harmful-code-generation
+    type: Risk
+  # atlas-dangerous-use → LLM06 (using model with intent to harm relates to excessive agency)
+  - id: atlas-dangerous-use
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - atlas-dangerous-use
+    type: Risk
+  # atlas-improper-usage → LLM06 (model used beyond intended purpose relates to excessive agency)
+  - id: atlas-improper-usage
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - atlas-improper-usage
+    type: Risk
+  # atlas-function-calling-hallucination-agentic → LLM06 (incorrect function calls lead to unintended actions)
+  - id: atlas-function-calling-hallucination-agentic
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - atlas-function-calling-hallucination-agentic
+    type: Risk
+  # atlas-exploit-trust-mismatch-agentic → LLM06 (trust boundary bypass enables excessive agency)
+  - id: atlas-exploit-trust-mismatch-agentic
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - atlas-exploit-trust-mismatch-agentic
+    type: Risk
+  # atlas-unauthorized-use-agentic → LLM06 (unauthorized access enables unintended actions)
+  - id: atlas-unauthorized-use-agentic
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - atlas-unauthorized-use-agentic
+    type: Risk
+  # atlas-misaligned-actions-agentic → LLM06 (misaligned agent actions are excessive agency)
+  - id: atlas-misaligned-actions-agentic
+    related_mappings:
+      - llm062025-excessive-agency
+    type: Risk
+  - id: llm062025-excessive-agency
+    related_mappings:
+      - atlas-misaligned-actions-agentic
+    type: Risk
+  # atlas-external-resources-attack-agentic → LLM03 (compromised external resources are supply chain risk)
+  - id: atlas-external-resources-attack-agentic
+    related_mappings:
+      - llm032025-supply-chain
+    type: Risk
+  - id: llm032025-supply-chain
+    related_mappings:
+      - atlas-external-resources-attack-agentic
+    type: Risk
+  # atlas-poor-model-accuracy → LLM09 (inaccurate outputs produce misinformation)
+  - id: atlas-poor-model-accuracy
+    related_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    related_mappings:
+      - atlas-poor-model-accuracy
+    type: Risk
+  # atlas-output-bias → LLM09 (biased output can constitute misinformation)
+  - id: atlas-output-bias
+    related_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    related_mappings:
+      - atlas-output-bias
+    type: Risk
+  # atlas-decision-bias → LLM09 (biased decisions produce misleading outcomes)
+  - id: atlas-decision-bias
+    related_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    related_mappings:
+      - atlas-decision-bias
+    type: Risk
+  # atlas-non-disclosure → LLM09 (not disclosing AI-generated content enables misinformation)
+  - id: atlas-non-disclosure
+    related_mappings:
+      - llm092025-misinformation
+    type: Risk
+  - id: llm092025-misinformation
+    related_mappings:
+      - atlas-non-disclosure
+    type: Risk
+  # atlas-extraction-attack → LLM10 (model theft through repeated queries is unbounded consumption)
+  - id: atlas-extraction-attack
+    related_mappings:
+      - llm102025-unbounded-consumption
+    type: Risk
+  - id: llm102025-unbounded-consumption
+    related_mappings:
+      - atlas-extraction-attack
+    type: Risk
+  # atlas-redundant-actions-agentic → LLM10 (redundant actions waste resources, service degradation)
+  - id: atlas-redundant-actions-agentic
+    related_mappings:
+      - llm102025-unbounded-consumption
+    type: Risk
+  - id: llm102025-unbounded-consumption
+    related_mappings:
+      - atlas-redundant-actions-agentic
+    type: Risk
+  # atlas-data-contamination → LLM04 (contaminated training data is a poisoning vector)
+  - id: atlas-data-contamination
+    related_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    related_mappings:
+      - atlas-data-contamination
+    type: Risk
+  # atlas-improper-retraining → LLM04 (retraining on bad data introduces model poisoning)
+  - id: atlas-improper-retraining
+    related_mappings:
+      - llm042025-data-and-model-poisoning
+    type: Risk
+  - id: llm042025-data-and-model-poisoning
+    related_mappings:
+      - atlas-improper-retraining
+    type: Risk

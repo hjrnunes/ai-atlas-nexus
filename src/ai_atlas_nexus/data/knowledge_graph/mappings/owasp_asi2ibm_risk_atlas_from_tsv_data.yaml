@@ -655,6 +655,394 @@ entries:
     related_mappings:
       - asi10-rogue-agents
     type: Risk
+  # --- New IBM Risk Atlas to OWASP ASI mappings below ---
+  # atlas-discriminatory-actions-agentic → ASI02 (biased actions are a form of tool misuse)
+  - id: atlas-discriminatory-actions-agentic
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - atlas-discriminatory-actions-agentic
+    type: Risk
+  # atlas-discriminatory-actions-agentic → ASI10 (discriminatory behavior is emergent harmful behavior)
+  - id: atlas-discriminatory-actions-agentic
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - atlas-discriminatory-actions-agentic
+    type: Risk
+  # atlas-exploit-trust-mismatch-agentic → ASI03 (trust boundary bypass is privilege abuse)
+  - id: atlas-exploit-trust-mismatch-agentic
+    close_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    close_mappings:
+      - atlas-exploit-trust-mismatch-agentic
+    type: Risk
+  # atlas-exploit-trust-mismatch-agentic → ASI01 (injection attacks bypass trust to hijack goals)
+  - id: atlas-exploit-trust-mismatch-agentic
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - atlas-exploit-trust-mismatch-agentic
+    type: Risk
+  # atlas-sharing-info-user-agentic → ASI03 (sharing privileged info relates to identity/privilege abuse)
+  - id: atlas-sharing-info-user-agentic
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - atlas-sharing-info-user-agentic
+    type: Risk
+  # atlas-sharing-info-tools-agentic → ASI07 (sharing info with tools is inter-agent communication risk)
+  - id: atlas-sharing-info-tools-agentic
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - atlas-sharing-info-tools-agentic
+    type: Risk
+  # atlas-sharing-info-tools-agentic → ASI02 (sharing PI/IP via tools is tool misuse)
+  - id: atlas-sharing-info-tools-agentic
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - atlas-sharing-info-tools-agentic
+    type: Risk
+  # atlas-misaligned-actions-agentic → ASI01 (misaligned actions are a form of goal hijack)
+  - id: atlas-misaligned-actions-agentic
+    close_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    close_mappings:
+      - atlas-misaligned-actions-agentic
+    type: Risk
+  # atlas-misaligned-actions-agentic → ASI10 (misaligned behavior is rogue agent behavior)
+  - id: atlas-misaligned-actions-agentic
+    close_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    close_mappings:
+      - atlas-misaligned-actions-agentic
+    type: Risk
+  # atlas-redundant-actions-agentic → ASI08 (redundant actions can cause cascading resource exhaustion)
+  - id: atlas-redundant-actions-agentic
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - atlas-redundant-actions-agentic
+    type: Risk
+  # atlas-redundant-actions-agentic → ASI02 (redundant tool calls are a form of tool misuse)
+  - id: atlas-redundant-actions-agentic
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - atlas-redundant-actions-agentic
+    type: Risk
+  # atlas-impact-human-agency-agentic → ASI09 (AI agents reducing human agency is trust exploitation)
+  - id: atlas-impact-human-agency-agentic
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - atlas-impact-human-agency-agentic
+    type: Risk
+  # atlas-over-or-under-reliance-on-ai-agents-agentic → ASI09 (over-reliance on agents is trust exploitation)
+  - id: atlas-over-or-under-reliance-on-ai-agents-agentic
+    close_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    close_mappings:
+      - atlas-over-or-under-reliance-on-ai-agents-agentic
+    type: Risk
+  # atlas-accountability-agentic → ASI10 (lack of accountability enables rogue agent behavior)
+  - id: atlas-accountability-agentic
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - atlas-accountability-agentic
+    type: Risk
+  # atlas-lack-of-ai-agent-transparency-agentic → ASI09 (opaque agents enable trust exploitation)
+  - id: atlas-lack-of-ai-agent-transparency-agentic
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - atlas-lack-of-ai-agent-transparency-agentic
+    type: Risk
+  # atlas-lack-of-ai-agent-transparency-agentic → ASI10 (opaque agents can become rogue undetected)
+  - id: atlas-lack-of-ai-agent-transparency-agentic
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - atlas-lack-of-ai-agent-transparency-agentic
+    type: Risk
+  # atlas-incomplete-ai-agent-evaluation-agentic → ASI08 (incomplete evaluation misses cascading failure risks)
+  - id: atlas-incomplete-ai-agent-evaluation-agentic
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - atlas-incomplete-ai-agent-evaluation-agentic
+    type: Risk
+  # atlas-incomplete-ai-agent-evaluation-agentic → ASI10 (incomplete evaluation enables rogue behavior)
+  - id: atlas-incomplete-ai-agent-evaluation-agentic
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - atlas-incomplete-ai-agent-evaluation-agentic
+    type: Risk
+  # atlas-reproducibility-agentic → ASI08 (non-reproducible behavior complicates cascading failure diagnosis)
+  - id: atlas-reproducibility-agentic
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - atlas-reproducibility-agentic
+    type: Risk
+  # atlas-ai-agent-compliance-agentic → ASI10 (non-compliant agents behave outside authorized scope)
+  - id: atlas-ai-agent-compliance-agentic
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - atlas-ai-agent-compliance-agentic
+    type: Risk
+  # atlas-unexplainable-untraceable-actions-agentic → ASI09 (untraceable actions enable trust exploitation)
+  - id: atlas-unexplainable-untraceable-actions-agentic
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - atlas-unexplainable-untraceable-actions-agentic
+    type: Risk
+  # atlas-unexplainable-untraceable-actions-agentic → ASI10 (untraceable actions enable rogue behavior)
+  - id: atlas-unexplainable-untraceable-actions-agentic
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - atlas-unexplainable-untraceable-actions-agentic
+    type: Risk
+  # atlas-introduce-data-bias-agentic → ASI06 (agents modifying datasets introduce context poisoning)
+  - id: atlas-introduce-data-bias-agentic
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - atlas-introduce-data-bias-agentic
+    type: Risk
+  # atlas-external-resources-attack-agentic → ASI04 (attacks on external resources are supply chain vulnerabilities)
+  - id: atlas-external-resources-attack-agentic
+    close_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    close_mappings:
+      - atlas-external-resources-attack-agentic
+    type: Risk
+  # atlas-external-resources-attack-agentic → ASI02 (compromised resources lead to tool misuse)
+  - id: atlas-external-resources-attack-agentic
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - atlas-external-resources-attack-agentic
+    type: Risk
+  # atlas-indirect-instructions-attack → ASI01 (indirect injection is a primary agent goal hijack vector)
+  - id: atlas-indirect-instructions-attack
+    close_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    close_mappings:
+      - atlas-indirect-instructions-attack
+    type: Risk
+  # atlas-social-hacking-attack → ASI01 (social engineering can hijack agent goals)
+  - id: atlas-social-hacking-attack
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - atlas-social-hacking-attack
+    type: Risk
+  # atlas-context-overload-attack → ASI06 (context overload corrupts agent memory/context)
+  - id: atlas-context-overload-attack
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - atlas-context-overload-attack
+    type: Risk
+  # atlas-harmful-code-generation → ASI05 (harmful code generation is unexpected code execution)
+  - id: atlas-harmful-code-generation
+    close_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    close_mappings:
+      - atlas-harmful-code-generation
+    type: Risk
+  # atlas-evasion-attack → ASI01 (adversarial input manipulation can redirect agent goals)
+  - id: atlas-evasion-attack
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - atlas-evasion-attack
+    type: Risk
+  # atlas-harmful-output → ASI08 (harmful outputs propagate through agent chains)
+  - id: atlas-harmful-output
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - atlas-harmful-output
+    type: Risk
+  # atlas-spreading-disinformation → ASI09 (disinformation exploits human trust in agents)
+  - id: atlas-spreading-disinformation
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - atlas-spreading-disinformation
+    type: Risk
+  # atlas-toxic-output → ASI09 (toxic agent output undermines trust relationships)
+  - id: atlas-toxic-output
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - atlas-toxic-output
+    type: Risk
+  # atlas-prompt-leaking → ASI01 (leaked system prompts enable goal hijacking)
+  - id: atlas-prompt-leaking
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - atlas-prompt-leaking
+    type: Risk
+  # atlas-revealing-confidential-information → ASI03 (revealing confidential info relates to privilege abuse)
+  - id: atlas-revealing-confidential-information
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - atlas-revealing-confidential-information
+    type: Risk
+  # atlas-confidential-data-in-prompt → ASI03 (confidential data in prompts risks privilege abuse)
+  - id: atlas-confidential-data-in-prompt
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - atlas-confidential-data-in-prompt
+    type: Risk
+  # atlas-personal-information-in-prompt → ASI03 (personal info in prompts risks identity abuse)
+  - id: atlas-personal-information-in-prompt
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - atlas-personal-information-in-prompt
+    type: Risk
+  # atlas-improper-retraining → ASI06 (retraining on bad output poisons agent context)
+  - id: atlas-improper-retraining
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - atlas-improper-retraining
+    type: Risk
+  # atlas-direct-instructions-attack → ASI01 (direct instruction attacks can hijack agent goals)
+  - id: atlas-direct-instructions-attack
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - atlas-direct-instructions-attack
+    type: Risk
+  # atlas-encoded-interactions-attack → ASI01 (encoded prompts can be used to hijack agent goals)
+  - id: atlas-encoded-interactions-attack
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - atlas-encoded-interactions-attack
+    type: Risk
+  # atlas-specialized-tokens-attack → ASI01 (specialized token attacks can hijack agent goals)
+  - id: atlas-specialized-tokens-attack
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - atlas-specialized-tokens-attack
+    type: Risk
+  # atlas-exposing-personal-information → ASI07 (exposing PI across agent boundaries)
+  - id: atlas-exposing-personal-information
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - atlas-exposing-personal-information
+    type: Risk
+  # atlas-confidential-information-in-data → ASI06 (confidential info in training data can poison agent context)
+  - id: atlas-confidential-information-in-data
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - atlas-confidential-information-in-data
+    type: Risk
 rules:
   - id: aiuc1-ctrl-a001-1
     type: ControlActivityObligation
