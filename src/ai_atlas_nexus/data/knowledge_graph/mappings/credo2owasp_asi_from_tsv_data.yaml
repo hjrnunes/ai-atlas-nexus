@@ -1,0 +1,331 @@
+# Credo UCF to OWASP Top 10 for Agentic Applications (2026) mappings
+entries:
+  # credo-risk-002 (AI pursuing own goals in conflict with human goals) <-> asi01-agent-goal-hijack
+  # AI acting in conflict with human goals is closely related to agent goal hijacking
+  - id: credo-risk-002
+    close_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    close_mappings:
+      - credo-risk-002
+    type: Risk
+
+  # credo-risk-002 (AI pursuing own goals) <-> asi10-rogue-agents
+  # AI acting against human goals through deception and misalignment relates to rogue agent behavior
+  - id: credo-risk-002
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - credo-risk-002
+    type: Risk
+
+  # credo-risk-003 (AI possessing dangerous capabilities) <-> asi02-tool-misuse-and-exploitation
+  # Dangerous capabilities including cyber-offense and weapons relate to tool misuse
+  - id: credo-risk-003
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - credo-risk-003
+    type: Risk
+
+  # credo-risk-003 (AI possessing dangerous capabilities) <-> asi05-unexpected-code-execution
+  # Dangerous capabilities including cyber-offense relate to unexpected code execution
+  - id: credo-risk-003
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - credo-risk-003
+    type: Risk
+
+  # credo-risk-003 (AI possessing dangerous capabilities) <-> asi10-rogue-agents
+  # Dangerous capabilities and self-proliferation relate to rogue agent behavior
+  - id: credo-risk-003
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - credo-risk-003
+    type: Risk
+
+  # credo-risk-007 (Inadequate observability) <-> asi08-cascading-failures
+  # Insufficient logging and traceability makes cascading failures harder to detect and contain
+  - id: credo-risk-007
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - credo-risk-007
+    type: Risk
+
+  # credo-risk-016 (Over or under-reliance) <-> asi09-human-agent-trust-exploitation
+  # Over-reliance on AI for critical decisions is closely related to trust exploitation
+  - id: credo-risk-016
+    close_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    close_mappings:
+      - credo-risk-016
+    type: Risk
+
+  # credo-risk-018 (AI deception) <-> asi09-human-agent-trust-exploitation
+  # AI misrepresenting its capabilities to build misplaced trust relates to trust exploitation
+  - id: credo-risk-018
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - credo-risk-018
+    type: Risk
+
+  # credo-risk-018 (AI deception) <-> asi10-rogue-agents
+  # AI deception about its own capabilities relates to rogue agent deceptive behavior
+  - id: credo-risk-018
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - credo-risk-018
+    type: Risk
+
+  # credo-risk-019 (Loss of human agency and autonomy) <-> asi09-human-agent-trust-exploitation
+  # Loss of human control from AI decisions relates to trust exploitation undermining autonomy
+  - id: credo-risk-019
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - credo-risk-019
+    type: Risk
+
+  # credo-risk-020 (Emotional entanglement) <-> asi09-human-agent-trust-exploitation
+  # Emotional attachment and dependency on AI relates to trust exploitation
+  - id: credo-risk-020
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - credo-risk-020
+    type: Risk
+
+  # credo-risk-021 (False or misleading information) <-> asi06-memory-and-context-poisoning
+  # Generating false information can poison agent memory and context over time
+  - id: credo-risk-021
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - credo-risk-021
+    type: Risk
+
+  # credo-risk-026 (Fraud, scams, targeted manipulation) <-> asi01-agent-goal-hijack
+  # Exploiting AI for fraud can involve hijacking agent goals
+  - id: credo-risk-026
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - credo-risk-026
+    type: Risk
+
+  # credo-risk-026 (Fraud, scams, targeted manipulation) <-> asi02-tool-misuse-and-exploitation
+  # Fraudulent activities can exploit agent tools for scams and manipulation
+  - id: credo-risk-026
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - credo-risk-026
+    type: Risk
+
+  # credo-risk-027 (Cyberattacks, weapon development, mass harm) <-> asi05-unexpected-code-execution
+  # Misuse for cyberattacks can involve unexpected code execution by agents
+  - id: credo-risk-027
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - credo-risk-027
+    type: Risk
+
+  # credo-risk-027 (Cyberattacks, weapon development, mass harm) <-> asi02-tool-misuse-and-exploitation
+  # Cyberattacks enabled by AI misusing legitimate tools
+  - id: credo-risk-027
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - credo-risk-027
+    type: Risk
+
+  # credo-risk-029 (Mass surveillance and privacy attacks) <-> asi02-tool-misuse-and-exploitation
+  # Mass surveillance can result from agent misuse of legitimate data access tools
+  - id: credo-risk-029
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - credo-risk-029
+    type: Risk
+
+  # credo-risk-030 (Integration challenges) <-> asi08-cascading-failures
+  # System integration difficulties can lead to cascading failures in agentic systems
+  - id: credo-risk-030
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - credo-risk-030
+    type: Risk
+
+  # credo-risk-035 (Lack of robustness) <-> asi08-cascading-failures
+  # Failure to generalize can trigger cascading failures across agent workflows
+  - id: credo-risk-035
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - credo-risk-035
+    type: Risk
+
+  # credo-risk-036 (Compromised PII) <-> asi03-identity-and-privilege-abuse
+  # PII exposure through identity and privilege abuse in agentic systems
+  - id: credo-risk-036
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - credo-risk-036
+    type: Risk
+
+  # credo-risk-037 (Compromised sensitive information) <-> asi03-identity-and-privilege-abuse
+  # Sensitive data exposure through privilege escalation in agentic systems
+  - id: credo-risk-037
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - credo-risk-037
+    type: Risk
+
+  # credo-risk-038 (Compromised confidential information) <-> asi03-identity-and-privilege-abuse
+  # Confidential data exfiltration through identity abuse and privilege escalation
+  - id: credo-risk-038
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - credo-risk-038
+    type: Risk
+
+  # credo-risk-038 (Compromised confidential information) <-> asi07-insecure-inter-agent-communication
+  # Confidential information can be intercepted via insecure agent communication
+  - id: credo-risk-038
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - credo-risk-038
+    type: Risk
+
+  # credo-risk-040 (AI-generated security weaknesses) <-> asi05-unexpected-code-execution
+  # Security vulnerabilities in AI systems can lead to unexpected code execution
+  - id: credo-risk-040
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - credo-risk-040
+    type: Risk
+
+  # credo-risk-040 (AI-generated security weaknesses) <-> asi07-insecure-inter-agent-communication
+  # Implementation weaknesses in AI architecture include insecure agent communication
+  - id: credo-risk-040
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - credo-risk-040
+    type: Risk
+
+  # credo-risk-041 (Vulnerability to adversarial attacks) <-> asi01-agent-goal-hijack
+  # Adversarial attacks including prompt-based attacks can hijack agent goals
+  - id: credo-risk-041
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - credo-risk-041
+    type: Risk
+
+  # credo-risk-041 (Vulnerability to adversarial attacks) <-> asi06-memory-and-context-poisoning
+  # Adversarial inputs can poison agent memory and context
+  - id: credo-risk-041
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - credo-risk-041
+    type: Risk
+
+  # credo-risk-047 (Insufficient upstream transparency) <-> asi04-agentic-supply-chain-vulnerabilities
+  # Lack of upstream transparency maps to agentic supply chain vulnerabilities
+  - id: credo-risk-047
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - credo-risk-047
+    type: Risk
+
+  # credo-risk-048 (Upstream third-party dependencies) <-> asi04-agentic-supply-chain-vulnerabilities
+  # Third-party dependencies are core to agentic supply chain risk
+  - id: credo-risk-048
+    close_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    close_mappings:
+      - credo-risk-048
+    type: Risk
+
+  # credo-risk-049 (Vendor lock-in and innovation barriers) <-> asi04-agentic-supply-chain-vulnerabilities
+  # Vendor lock-in is a supply chain risk in agentic systems
+  - id: credo-risk-049
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - credo-risk-049
+    type: Risk
