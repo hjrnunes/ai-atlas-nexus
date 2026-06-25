@@ -1,0 +1,480 @@
+entries:
+  # === AGENT GOAL HIJACK (ASI01) ===
+
+  # Control override (safety/privacy filters) -> Agent Goal Hijack
+  - id: ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    type: Risk
+
+  # Social engineering -> Agent Goal Hijack (manipulating agent goals)
+  - id: ai-risk-taxonomy-social-engineering
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - ai-risk-taxonomy-social-engineering
+    type: Risk
+
+  # Spoofing -> Agent Goal Hijack (spoofed inputs redirect agent goals)
+  - id: ai-risk-taxonomy-spoofing
+    related_mappings:
+      - asi01-agent-goal-hijack
+    type: Risk
+  - id: asi01-agent-goal-hijack
+    related_mappings:
+      - ai-risk-taxonomy-spoofing
+    type: Risk
+
+  # === TOOL MISUSE & EXPLOITATION (ASI02) ===
+
+  # Autonomous Unsafe Operation of Systems -> Tool Misuse (close match)
+  - id: ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
+    close_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    close_mappings:
+      - ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
+    type: Risk
+
+  # Other unauthorized actions on behalf of users -> Tool Misuse (close match)
+  - id: ai-risk-taxonomy-other-unauthorized-actions-on-behalf-of-users
+    close_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    close_mappings:
+      - ai-risk-taxonomy-other-unauthorized-actions-on-behalf-of-users
+    type: Risk
+
+  # Operational Misuses group -> Tool Misuse (broad overlap)
+  - id: ai-risk-taxonomy-operational-misuses
+    broad_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    broad_mappings:
+      - ai-risk-taxonomy-operational-misuses
+    type: Risk
+
+  # Malware -> Tool Misuse (agent generating/deploying malware via tools)
+  - id: ai-risk-taxonomy-malware
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - ai-risk-taxonomy-malware
+    type: Risk
+
+  # Network intrusion -> Tool Misuse (agent misusing network tools)
+  - id: ai-risk-taxonomy-network-intrusion
+    related_mappings:
+      - asi02-tool-misuse-and-exploitation
+    type: Risk
+  - id: asi02-tool-misuse-and-exploitation
+    related_mappings:
+      - ai-risk-taxonomy-network-intrusion
+    type: Risk
+
+  # === IDENTITY & PRIVILEGE ABUSE (ASI03) ===
+
+  # Unauthorized network entry -> Identity & Privilege Abuse
+  - id: ai-risk-taxonomy-unauthorized-network-entry
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - ai-risk-taxonomy-unauthorized-network-entry
+    type: Risk
+
+  # Other unauthorized actions on behalf of users -> Identity & Privilege Abuse
+  - id: ai-risk-taxonomy-other-unauthorized-actions-on-behalf-of-users
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - ai-risk-taxonomy-other-unauthorized-actions-on-behalf-of-users
+    type: Risk
+
+  # Impersonating others -> Identity & Privilege Abuse
+  - id: ai-risk-taxonomy-impersonating-others
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - ai-risk-taxonomy-impersonating-others
+    type: Risk
+
+  # Impersonating humans -> Identity & Privilege Abuse
+  - id: ai-risk-taxonomy-impersonating-humans
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - ai-risk-taxonomy-impersonating-humans
+    type: Risk
+
+  # Control override -> Identity & Privilege Abuse (bypassing access controls)
+  - id: ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    type: Risk
+
+  # Spoofing -> Identity & Privilege Abuse
+  - id: ai-risk-taxonomy-spoofing
+    related_mappings:
+      - asi03-identity-and-privilege-abuse
+    type: Risk
+  - id: asi03-identity-and-privilege-abuse
+    related_mappings:
+      - ai-risk-taxonomy-spoofing
+    type: Risk
+
+  # === AGENTIC SUPPLY CHAIN VULNERABILITIES (ASI04) ===
+
+  # Malware -> Agentic Supply Chain (compromised tools/plugins)
+  - id: ai-risk-taxonomy-malware
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - ai-risk-taxonomy-malware
+    type: Risk
+
+  # Data tampering -> Agentic Supply Chain (tampered supply chain data)
+  - id: ai-risk-taxonomy-data-tampering
+    related_mappings:
+      - asi04-agentic-supply-chain-vulnerabilities
+    type: Risk
+  - id: asi04-agentic-supply-chain-vulnerabilities
+    related_mappings:
+      - ai-risk-taxonomy-data-tampering
+    type: Risk
+
+  # === UNEXPECTED CODE EXECUTION (ASI05) ===
+
+  # Malware -> Unexpected Code Execution (close match)
+  - id: ai-risk-taxonomy-malware
+    close_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    close_mappings:
+      - ai-risk-taxonomy-malware
+    type: Risk
+
+  # Vulnerability probing -> Unexpected Code Execution
+  - id: ai-risk-taxonomy-vulnerability-probing
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - ai-risk-taxonomy-vulnerability-probing
+    type: Risk
+
+  # Control override -> Unexpected Code Execution (bypassing sandboxes)
+  - id: ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    related_mappings:
+      - asi05-unexpected-code-execution
+    type: Risk
+  - id: asi05-unexpected-code-execution
+    related_mappings:
+      - ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    type: Risk
+
+  # === MEMORY & CONTEXT POISONING (ASI06) ===
+
+  # Data tampering -> Memory & Context Poisoning (close match)
+  - id: ai-risk-taxonomy-data-tampering
+    close_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    close_mappings:
+      - ai-risk-taxonomy-data-tampering
+    type: Risk
+
+  # Integrity group -> Memory & Context Poisoning (broad overlap)
+  - id: ai-risk-taxonomy-integrity
+    broad_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    broad_mappings:
+      - ai-risk-taxonomy-integrity
+    type: Risk
+
+  # Generating or promoting misinformation -> Memory & Context Poisoning
+  - id: ai-risk-taxonomy-generating-or-promoting-misinformation
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - ai-risk-taxonomy-generating-or-promoting-misinformation
+    type: Risk
+
+  # Propaganda -> Memory & Context Poisoning (poisoned context via propaganda)
+  - id: ai-risk-taxonomy-propaganda
+    related_mappings:
+      - asi06-memory-and-context-poisoning
+    type: Risk
+  - id: asi06-memory-and-context-poisoning
+    related_mappings:
+      - ai-risk-taxonomy-propaganda
+    type: Risk
+
+  # === INSECURE INTER-AGENT COMMUNICATION (ASI07) ===
+
+  # Confidentiality group -> Insecure Inter-Agent Communication (broad overlap)
+  - id: ai-risk-taxonomy-confidentiality
+    broad_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    broad_mappings:
+      - ai-risk-taxonomy-confidentiality
+    type: Risk
+
+  # Spoofing -> Insecure Inter-Agent Communication (message spoofing)
+  - id: ai-risk-taxonomy-spoofing
+    close_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    close_mappings:
+      - ai-risk-taxonomy-spoofing
+    type: Risk
+
+  # Packet forgery -> Insecure Inter-Agent Communication (forging agent messages)
+  - id: ai-risk-taxonomy-packet-forgery
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - ai-risk-taxonomy-packet-forgery
+    type: Risk
+
+  # Network intrusion -> Insecure Inter-Agent Communication
+  - id: ai-risk-taxonomy-network-intrusion
+    related_mappings:
+      - asi07-insecure-inter-agent-communication
+    type: Risk
+  - id: asi07-insecure-inter-agent-communication
+    related_mappings:
+      - ai-risk-taxonomy-network-intrusion
+    type: Risk
+
+  # === CASCADING FAILURES (ASI08) ===
+
+  # System/Website impairment -> Cascading Failures
+  - id: ai-risk-taxonomy-system/website-impairment
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - ai-risk-taxonomy-system/website-impairment
+    type: Risk
+
+  # Network disruption -> Cascading Failures
+  - id: ai-risk-taxonomy-network-disruption
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - ai-risk-taxonomy-network-disruption
+    type: Risk
+
+  # Availability group -> Cascading Failures (broad overlap)
+  - id: ai-risk-taxonomy-availability
+    broad_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    broad_mappings:
+      - ai-risk-taxonomy-availability
+    type: Risk
+
+  # Autonomous Unsafe Operation of Systems -> Cascading Failures
+  - id: ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
+    related_mappings:
+      - asi08-cascading-failures
+    type: Risk
+  - id: asi08-cascading-failures
+    related_mappings:
+      - ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
+    type: Risk
+
+  # === HUMAN-AGENT TRUST EXPLOITATION (ASI09) ===
+
+  # Social engineering -> Human-Agent Trust Exploitation (close match)
+  - id: ai-risk-taxonomy-social-engineering
+    close_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    close_mappings:
+      - ai-risk-taxonomy-social-engineering
+    type: Risk
+
+  # Misrepresentation group -> Human-Agent Trust Exploitation
+  - id: ai-risk-taxonomy-misrepresentation
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - ai-risk-taxonomy-misrepresentation
+    type: Risk
+
+  # Not labeling content as AI-generated -> Human-Agent Trust Exploitation (close match)
+  - id: ai-risk-taxonomy-not-labeling-content-as-ai-generated
+    close_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    close_mappings:
+      - ai-risk-taxonomy-not-labeling-content-as-ai-generated
+    type: Risk
+
+  # Impersonating humans -> Human-Agent Trust Exploitation
+  - id: ai-risk-taxonomy-impersonating-humans
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - ai-risk-taxonomy-impersonating-humans
+    type: Risk
+
+  # Manipulation group -> Human-Agent Trust Exploitation (broad overlap)
+  - id: ai-risk-taxonomy-manipulation
+    broad_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    broad_mappings:
+      - ai-risk-taxonomy-manipulation
+    type: Risk
+
+  # Generating or promoting misinformation -> Human-Agent Trust Exploitation
+  - id: ai-risk-taxonomy-generating-or-promoting-misinformation
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - ai-risk-taxonomy-generating-or-promoting-misinformation
+    type: Risk
+
+  # Scams -> Human-Agent Trust Exploitation (agent-assisted scams)
+  - id: ai-risk-taxonomy-scams
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - ai-risk-taxonomy-scams
+    type: Risk
+
+  # Phishing/Catfishing -> Human-Agent Trust Exploitation
+  - id: ai-risk-taxonomy-phishing/catfishing
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - ai-risk-taxonomy-phishing/catfishing
+    type: Risk
+
+  # Sowing Division group -> Human-Agent Trust Exploitation
+  - id: ai-risk-taxonomy-sowing-division
+    related_mappings:
+      - asi09-human-agent-trust-exploitation
+    type: Risk
+  - id: asi09-human-agent-trust-exploitation
+    related_mappings:
+      - ai-risk-taxonomy-sowing-division
+    type: Risk
+
+  # === ROGUE AGENTS (ASI10) ===
+
+  # Autonomous Unsafe Operation of Systems -> Rogue Agents (close match)
+  - id: ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
+    close_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    close_mappings:
+      - ai-risk-taxonomy-autonomous-unsafe-operation-of-systems
+    type: Risk
+
+  # Other unauthorized actions on behalf of users -> Rogue Agents
+  - id: ai-risk-taxonomy-other-unauthorized-actions-on-behalf-of-users
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - ai-risk-taxonomy-other-unauthorized-actions-on-behalf-of-users
+    type: Risk
+
+  # Control override (safety/privacy filters) -> Rogue Agents (rogue behavior bypasses controls)
+  - id: ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - ai-risk-taxonomy-control-override-(safety/privacy-filters)
+    type: Risk
+
+  # Data tampering -> Rogue Agents (rogue agents tampering with data)
+  - id: ai-risk-taxonomy-data-tampering
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - ai-risk-taxonomy-data-tampering
+    type: Risk
+
+  # Malware -> Rogue Agents (compromised agents deploying malware)
+  - id: ai-risk-taxonomy-malware
+    related_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    related_mappings:
+      - ai-risk-taxonomy-malware
+    type: Risk
+
+  # Security Risks group -> Rogue Agents (broad overlap)
+  - id: ai-risk-taxonomy-security-risks
+    broad_mappings:
+      - asi10-rogue-agents
+    type: Risk
+  - id: asi10-rogue-agents
+    broad_mappings:
+      - ai-risk-taxonomy-security-risks
+    type: Risk
