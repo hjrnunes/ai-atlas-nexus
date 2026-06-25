@@ -71,14 +71,6 @@ entries:
     broad_mappings:
       - atlas-data-usage-rights
     type: Risk
-  - id: atlas-data-usage-rights
-    broad_mappings:
-      - llm032025-supply-chain
-    type: Risk
-  - id: llm032025-supply-chain
-    broad_mappings:
-      - atlas-data-usage-rights
-    type: Risk
   - id: atlas-exposing-personal-information
     broad_mappings:
       - llm022025-sensitive-information-disclosure
